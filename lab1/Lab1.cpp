@@ -32,9 +32,9 @@ int main(int argc, char** argv)
             printf("%d ", x_global[i]);
         }
         cout << endl;
-    
+
         int ibeg = 0;
-        for (int i = 0; i < size - 1; i++) 
+        for (int i = 0; i < size - 1; i++)
         {
             MPI_Send(&x_global[ibeg], i + 1, MPI_INT, i + 1, 0, MPI_COMM_WORLD);
             ibeg += i + 1;
